@@ -1,0 +1,10 @@
+<h2 class="content-subhead"><%= @title %></h2>
+
+<% if @bold_words %>
+  <%= "true" %>
+  <%= bolden(in_paragraphs(@text), @bold_words) %>
+<% else %>
+  <%= params %>
+  <%= in_paragraphs(@text) %>
+<% end %>
+
